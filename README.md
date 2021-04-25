@@ -1,7 +1,7 @@
 # CPP-KeyLogger
 simple keylogger that sends any collected information back to the penetration tester
 
-**Compilation instructions:
+# Compilation instructions:
 
 In order for the compiler to include the windows socket library, one more thing needs to be done.
 
