@@ -1,4 +1,4 @@
-# CPP-KeyLogger
+# CPP-KeyLogger (meant to be used for pen testing only)
 simple keylogger that sends any collected information back to the penetration tester
 
 # Compilation instructions:
